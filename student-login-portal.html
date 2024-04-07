@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./newIdea.css">
+    <title>Student Login Portal</title>
+    <link rel="icon" href="./title.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class=" div2">
+            <div class="container d-flex justify-content-center align-items-center min-vh-100">
+                <div class="card  animated-border" style="width: 24rem; height: 40rem;">
+                    <img src="./CanteenBackgroundImage/stu-login-card.jpg" class="card-img-top " alt="...">
+                    <div class="card-body ">
+                        <h5 class="card-title align">Student Login</h5>
+                        <p class="card-text align1">If you are a new student please create new profile to get
+                            login
+                        </p>
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Enter your Id" autofocus
+                                    required>
+                                <label for="name">User Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="passreg"
+                                    placeholder="Enter your registered Password" required>
+                                <label for="Password">Password</label>
+                            </div>
+                            <input type="submit" value="Login" onclick="validation()" class="btn btn-primary">
+                            <a href="./new-student-Login.html" class="nextlink">New Student?</a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validation() {
+            var Loginid = document.getElementById("name").value;
+            var Passwordreg = document.getElementById("passreg").value;
+            var check = {
+                "Username": Loginid,
+                "Password": Passwordreg
+            };
+            localStorage.setItem("check", JSON.stringify(check));
+
+            // Retrieve user data from localStorage
+            var allStudents = JSON.parse(localStorage.getItem("allStudent"));
+            var storedCheck = JSON.parse(localStorage.getItem("check"));
+
+            // Check if the user exists in the stored data
+            var found = false;
+            for (var i = 0; i < allStudents.length; i++) {
+                if (allStudents[i].Username === storedCheck.Username) {
+                    found = true;
+                    if (allStudents[i].Password === storedCheck.Password) {
+                        // Correct username and password
+                        open("rio-canteen-og-site.html");
+                        return; // Exit the function
+                    } else {
+                        // Incorrect password
+                        alert("Incorrect password for this username");
+                        return; // Exit the function
+                    }
+                }
+            }
+
+            // User not found
+            if (!found) {
+                alert("Username not found");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Dancing+Script:wght@700&family=Grand+Hotel&family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.div1 {
+  height: 800px;
+  position: relative;
+  background-image: url(./CanteenBackgroundImage/Page1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.div2 {
+  height: 800px;
+  position: relative;
+  background-image: url(./CanteenBackgroundImage/Std-login-back.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.div3 {
+  height: 800px;
+  position: relative;
+  background-image: url(./CanteenBackgroundImage/new-std.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  height: 90px;
+  width: 90px;
+}
+
+.navsize {
+  font-size: 20px;
+  font-family: "Croissant One", cursive;
+}
+
+a:hover {
+  text-decoration-line: underline;
+}
+
+.canteenname {
+  font-size: 104px;
+  font-family: "Dancing Script", cursive;
+  text-align: end;
+  padding-right: 35px;
+  color: aliceblue;
+}
+@media only screen and (max-width: 435px) {
+  .canteenname {
+    font-size: 53px;
+  }
+  .canteenpurpose {
+    font-size: 22px;
+  }
+  .causion {
+    width: 300px !important;
+    font-size: 29px !important;
+  }
+  .causion1 {
+    width: 300px !important;
+    font-size: 29px !important;
+  }
+}
+
+.canteenpurpose {
+  font-size: 44px;
+  font-family: "Dancing Script", cursive;
+  text-align: end;
+  padding-right: 35px;
+  color: aliceblue;
+}
+
+.causion {
+  font-size: 35px;
+  font-family: "Dancing Script", cursive;
+  text-align: end;
+  padding-right: 35px;
+
+  color: rgb(239, 160, 204);
+}
+.causion1 {
+  float: right;
+  font-size: 35px;
+  font-family: "Dancing Script", cursive;
+  text-align: end;
+  padding-right: 35px;
+  width: 500px;
+  color: rgb(239, 160, 204);
+}
+.menu {
+  font-size: 35px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: rgb(239, 160, 204);
+  padding-top: 20px;
+}
+.survey {
+  font-size: 60px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: rgb(15, 14, 14);
+  padding-top: 20px;
+  font-weight: 900;
+}
+a span {
+  color: #111111;
+  transition: 0.5s;
+}
+
+a:hover span {
+  color: #0f0;
+  text-shadow: 0 0 1px #0f0, 0 0 2px #0f0, 0 0 3px #0f0;
+}
+
+a {
+  /* font-family: 'Poppins', sans-serif; */
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-top-color: red;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: yellow;
+  }
+  25% {
+    border-top-color: yellow;
+    border-right-color: red;
+    border-bottom-color: blue;
+    border-left-color: green;
+  }
+  50% {
+    border-top-color: green;
+    border-right-color: yellow;
+    border-bottom-color: red;
+    border-left-color: blue;
+  }
+  75% {
+    border-top-color: blue;
+    border-right-color: green;
+    border-bottom-color: yellow;
+    border-left-color: red;
+  }
+  100% {
+    border-top-color: red;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: yellow;
+  }
+}
+
+.animated-border {
+  border: 3px solid transparent; /* Initial transparent border */
+  animation: borderAnimation 1s infinite;
+  padding: 2px; /* Use 4s to complete a full cycle every 4 seconds */
+}
+
+.nextlink {
+  font-size: 19px;
+  padding-left: 13px;
+  color: red;
+}
+
+.align {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.align1 {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: x-large;
+  font-weight: 800;
+}

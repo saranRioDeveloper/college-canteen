@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./newIdea.css">
+  <title>Rio Canteen</title>
+  <link rel="icon" href="./title.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row ">
+      <div class=" div1">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <div class="container-fluid">
+            <img src="./CanteenBackgroundImage/logo.png" alt="The is not here" class="img-responsive logo"
+              title="Rio college canteen logo">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="text-white navsize nav-link active mx-3" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navsize mx-3" href="#" onclick="popmes()">Snacks List</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  navsize mx-3" href="#" onclick="popmes()">Canteen Special</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  navsize mx-3" href="#" onclick="popmes()">Today's combo</a>
+                </li>
+                <!-- <li class="nav-item ">
+                                    <a class="nav-link  navsize mx-3" href="./Opening_page.html" role="button" >
+                                        User Login
+                                    </a>
+                                    
+                                </li> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle navsize" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    User Login
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-black navsize text" href="./student-login-portal.html">Student</a>
+                    </li>
+                    <li><a class="dropdown-item text-black navsize text1" href="./rio-canteen-og-site.html">Staff</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div>
+          <p class="canteenname">Rio College </p>
+          <p class="causion1">This website is dedicated to Rio college student's and staff's
+            to book there snacks and softdrink in there free time </p>
+
+        </div>
+
+
+
+
+        <!-- <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid ">
+                  <a class="navbar-brand text-white" href="#"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-white"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active text-white navsize" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white navsize" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white navsize" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white navsize" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          User Login
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item text-black navsize" href="#">Action</a></li>
+                          <li><a class="dropdown-item text-black navsize" href="#">Another action</a></li>
+                          <li><a class="dropdown-item text-black navsize" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav> -->
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+
+  <script>
+    function popmes() {
+      alert("Please login to place order")
+    }
+  </script>
+  <script>
+    let text1 = document.querySelector('.text1');
+    text1.innerHTML = text1.innerText.split('').map((lett, j) =>
+      `<span style="transition-delay:${j * 40}ms;
+      filter : hue-rotate(${j * 50}deg)">${lett}</span>`).join('');
+  </script>
+  <script>
+    let text = document.querySelector('.text');
+    text.innerHTML = text.innerText.split('').map((letters, i) =>
+      `<span style="transition-delay:${i * 40}ms;
+          filter : hue-rotate(${i * 60}deg)">${letters}</span>`).join('');
+
+  </script>
+</body>
+
+</html>
